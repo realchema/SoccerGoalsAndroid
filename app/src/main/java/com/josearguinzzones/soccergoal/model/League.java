@@ -1,0 +1,127 @@
+package com.josearguinzzones.soccergoal.model;
+
+public class League {
+
+    private String teamName;
+    private String crestURI;
+    private String playedGames;
+    private String points;
+    private String wins;
+    private String draws;
+    private String losses;
+    private String goals;
+    private String goalDifference;
+    private String id;
+
+    public League() {
+    }
+
+    public League(String teamName, String crestURI, String playedGames, String points, String wins, String draws, String losses, String goals, String goalDifference, String id) {
+        this.teamName = teamName;
+        this.crestURI = crestURI;
+        this.playedGames = playedGames;
+        this.points = points;
+        this.wins = wins;
+        this.draws = draws;
+        this.losses = losses;
+        this.goals = goals;
+        this.goalDifference = goalDifference;
+        this.id = id;
+    }
+
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
+    public String getCrestURI() {
+        return crestURI;
+    }
+
+    public void setCrestURI(String crestURI) {
+        this.crestURI = crestURI;
+    }
+
+    public String getPlayedGames() {
+        return playedGames;
+    }
+
+    public void setPlayedGames(String playedGames) {
+        this.playedGames = playedGames;
+    }
+
+    public String getPoints() {
+        return points;
+    }
+
+    public void setPoints(String points) {
+        this.points = points;
+    }
+
+    public String getWins() {
+        return wins;
+    }
+
+    public void setWins(String wins) {
+        this.wins = wins;
+    }
+
+    public String getDraws() {
+        return draws;
+    }
+
+    public void setDraws(String draws) {
+        this.draws = draws;
+    }
+
+    public String getLosses() {
+        return losses;
+    }
+
+    public void setLosses(String losses) {
+        this.losses = losses;
+    }
+
+    public String getGoals() {
+        return goals;
+    }
+
+    public void setGoals(String goals) {
+        this.goals = goals;
+    }
+
+    public String getGoalDifference() {
+        return goalDifference;
+    }
+
+    public void setGoalDifference(String goalDifference) {
+        this.goalDifference = goalDifference;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "League{" +
+                "teamName='" + teamName + '\'' +
+                ", crestURI='" + crestURI + '\'' +
+                ", playedGames='" + playedGames + '\'' +
+                ", points='" + points + '\'' +
+                ", wins='" + wins + '\'' +
+                ", draws='" + draws + '\'' +
+                ", losses='" + losses + '\'' +
+                ", goals='" + goals + '\'' +
+                ", goalDifference='" + goalDifference + '\'' +
+                ", id='" + id + '\'' +
+                '}';
+    }
+}
