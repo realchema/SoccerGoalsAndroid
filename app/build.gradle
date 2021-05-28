@@ -47,4 +47,13 @@ dependencies {
     // https://mvnrepository.com/artifact/com.squareup.okhttp3/logging-interceptor
     implementation group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: '4.9.0'
 
+    def room_version = '2.3.0'
+
+    // Room Link: https://developer.android.com/jetpack/androidx/releases/room
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // RxJava Link: https://github.com/ReactiveX/RxJava
+    implementation "androidx.room:room-rxjava3:$room_version"
+
 }
