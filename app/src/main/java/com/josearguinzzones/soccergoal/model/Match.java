@@ -1,5 +1,7 @@
 package com.josearguinzzones.soccergoal.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -20,8 +22,10 @@ public class Match {
     private int matchday;
     private String stage;
     private String group;
-    private HashMap<String,String> homeTeam;
-    private HashMap<String,String> awayTeam;
+    private Team homeTeam;
+    private Team awayTeam;
+//    private HashMap<String,String> homeTeam;
+//    private HashMap<String,String> awayTeam;
     private Competition competition;
     private Score score;
 
@@ -60,24 +64,40 @@ public class Match {
         return group;
     }
 
-    public HashMap<String, String> getHomeTeam() {
+    public Team getHomeTeam() {
         return homeTeam;
     }
 
-    public HashMap<String, String> getAwayTeam() {
+    public void setHomeTeam(Team homeTeam) {
+        this.homeTeam = homeTeam;
+    }
+
+    public Team getAwayTeam() {
         return awayTeam;
     }
+
+    public void setAwayTeam(Team awayTeam) {
+        this.awayTeam = awayTeam;
+    }
+
+//        public HashMap<String, String> getHomeTeam() {
+//        return homeTeam;
+//    }
+//
+//    public HashMap<String, String> getAwayTeam() {
+//        return awayTeam;
+//    }
 
     public Score getScore() {
         return score;
     }
 
-    @Override
-    public String toString() {
-        if(homeTeam != null && awayTeam != null)
-            return homeTeam.get("name") + " - " + awayTeam.get("name");
-        return "empty match";
-    }
+//    @Override
+//    public String toString() {
+//        if(homeTeam != null && awayTeam != null)
+//            return homeTeam.get("name") + " - " + awayTeam.get("name");
+//        return "empty match";
+//    }
 
     public boolean isFinished(){
         return status.equals(STATUS_FINISHED);
@@ -97,6 +117,11 @@ public class Match {
 
     public Competition getCompetition() {
         return competition;
+    }
+
+    public String teamCrestUrl(int id){
+        String url = "https://crests.football-data.org/"+id+".svg";
+        return url;
     }
 
 //    @Override

@@ -47,4 +47,19 @@ public class Team {
     public String getTla() {
         return tla;
     }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", crestUrl='" + crestUrl + '\'' +
+                ", clubColors='" + clubColors + '\'' +
+                ", venue='" + venue + '\'' +
+                ", founded=" + founded +
+                ", area=" + area +
+                ", website='" + website + '\'' +
+                ", tla='" + tla + '\'' +
+                '}';
+    }
 }

@@ -1,5 +1,9 @@
 package com.josearguinzzones.soccergoal.network;
 
+import com.josearguinzzones.soccergoal.model.MatchesResponse;
+
+//import io.reactivex.rxjava3.core.Single;
+import io.reactivex.Single;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -8,8 +12,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceBuilder {
     private static final String URL2 = "https://api.football-data.org/v2/";
-    private static final String key = "881ee6d7a3db4094a6d9ac561c25962a";
-    private static final String value = "X-Auth-Token";
+    private static final String key = "X-Auth-Token";
+    private static final String value = "881ee6d7a3db4094a6d9ac561c25962a";
+    private FootballDataService api;
 
     // Create logger
     private static HttpLoggingInterceptor logger =
@@ -41,4 +46,8 @@ public class ServiceBuilder {
     public static <S> S buildService(Class<S> serviceType) {
         return retrofit.create(serviceType);
     }
+
+//    public Single<MatchesResponse> getMatchesForCompetition() {
+//        return api.getMatchesForCompetition(2014, 20);
+//    }
 }
